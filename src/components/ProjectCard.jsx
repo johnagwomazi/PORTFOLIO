@@ -9,7 +9,7 @@ export default function ProjectCard({ project }) {
   return (
     <MotionLink
       to={`/projects/${project.slug}`}
-      className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03] shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-colors duration-300 hover:bg-white/[0.06] will-change-transform block"
+      className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-[#27272A] bg-[#111113] shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-colors duration-300 hover:bg-[#18181B] will-change-transform block"
       whileHover={{ y: -8 }}
       transition={{ type: "spring", stiffness: 220, damping: 24 }}
     >
@@ -19,13 +19,13 @@ export default function ProjectCard({ project }) {
           src={project.image}
           alt={`Screenshot preview of ${project.title}`}
           loading="lazy"
-          className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+          className="h-full w-full object-fill transition duration-700 ease-out group-hover:scale-105"
         />
 
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0D1117] via-[#0D1117]/30 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#09090B] via-[#09090B]/30 to-transparent" />
 
         <div className="absolute left-4 top-4">
-          <span className="rounded-full border border-white/10 bg-[#0D1117]/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
+          <span className="rounded-full border border-[#27272A] bg-[#111113]/90 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#FAFAFA]">
             {project.category}
           </span>
         </div>
@@ -33,11 +33,11 @@ export default function ProjectCard({ project }) {
 
       {/* Card Content */}
       <div className="flex flex-1 flex-col p-5 sm:p-6">
-        <h3 className="text-xl font-semibold text-white transition-colors duration-200 group-hover:text-[#00F5D4]">
+        <h3 className="text-xl font-semibold text-[#FAFAFA] transition-colors duration-200 group-hover:text-[#FF5C93]">
           {project.title}
         </h3>
 
-        <p className="mt-3 text-sm leading-7 text-white/70">
+        <p className="mt-3 text-sm leading-7 text-[#A1A1AA]">
           {project.description}
         </p>
 
@@ -46,7 +46,7 @@ export default function ProjectCard({ project }) {
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-white/80"
+              className="rounded-full border border-[#27272A] bg-[#18181B] px-3 py-1 text-xs font-medium text-[#FAFAFA]"
             >
               {tech}
             </span>

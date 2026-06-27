@@ -39,28 +39,28 @@ export default function Hero({ onWorkClick }) {
         animate="visible"
       >
         <motion.p 
-          className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-[#00F5D4]"
+          className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-[#FF5C93]"
           variants={itemVariants}
         >
           Full Stack Developer • Product Builder
         </motion.p>
 
         <motion.h1 
-          className="font-display text-4xl font-bold tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl"
+          className="font-display text-4xl font-bold tracking-[-0.04em] text-[#FAFAFA] sm:text-6xl lg:text-7xl"
           variants={itemVariants}
         >
           AGWOM AZI JOHN
         </motion.h1>
 
         <motion.p 
-          className="mt-4 text-lg font-semibold text-white/85 sm:text-2xl"
+          className="mt-4 text-lg font-semibold text-[#FAFAFA] sm:text-2xl"
           variants={itemVariants}
         >
           Providing value for business growth through codes
         </motion.p>
 
         <motion.p 
-          className="mt-6 max-w-2xl text-base leading-8 text-white/65 sm:text-md"
+          className="mt-6 max-w-2xl text-base leading-8 text-[#A1A1AA] sm:text-md"
           variants={itemVariants}
         >
         I’m a fullstack developer based in Lagos, Nigeria, working with clients and teams from all over the world. I specialize in building beautiful, responsive, and high-performant web applications that deliver seamless user experiences.With a strong focus on frontend technologies and a solid foundation in backend development, 
@@ -75,14 +75,14 @@ export default function Hero({ onWorkClick }) {
           <button
             onClick={onWorkClick}
             type="button"
-            className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-[#00F5D4] to-[#7ef3e4] px-6 font-semibold text-[#031018] shadow-[0_12px_30px_rgba(0,245,212,0.18)] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+            className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-[#E70056] to-[#FF5C93] px-6 font-semibold text-[#FAFAFA] shadow-[0_12px_30px_rgba(231,0,86,0.24)] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
           >
             View My Work
           </button>
           
           <a
             href="#contact"
-            className="inline-flex h-12 items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 font-semibold text-white/90 transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/10 active:translate-y-0"
+            className="inline-flex h-12 items-center justify-center rounded-full border border-[#27272A] bg-[#111113] px-6 font-semibold text-[#FAFAFA] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#18181B] active:translate-y-0"
           >
             Let&apos;s Build Something Together
           </a>
@@ -103,7 +103,7 @@ export default function Hero({ onWorkClick }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/5 text-white/80 transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/10 hover:text-white active:translate-y-0"
+                className="grid h-11 w-11 place-items-center rounded-full border border-[#27272A] bg-[#111113] text-[#FAFAFA] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#18181B] hover:text-[#FAFAFA] active:translate-y-0"
               >
                 <Icon className="text-lg" aria-hidden="true" />
               </a>
@@ -114,16 +114,16 @@ export default function Hero({ onWorkClick }) {
 
       {/* Visual / Image Side */}
       <motion.div
-        className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#111827]/70 p-4 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl"
+        className="relative overflow-hidden rounded-[2rem] border border-[#27272A] bg-[#111113]/85 p-4 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl"
         variants={imageCardVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Glow Spheres */}
-        <div className="absolute -right-6 -top-6 h-56 w-56 rounded-full bg-[#00F5D4]/20 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-8 -left-8 h-56 w-56 rounded-full bg-[#8B5CF6]/20 blur-3xl pointer-events-none" />
+        <div className="absolute -right-6 -top-6 h-56 w-56 rounded-full bg-[#E70056]/20 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-8 -left-8 h-56 w-56 rounded-full bg-[#FF5C93]/20 blur-3xl pointer-events-none" />
 
-        <div className="relative min-h-[420px] overflow-hidden rounded-[1.75rem] border border-white/10">
+        <div className="relative min-h-[420px] overflow-hidden rounded-[1.75rem] border border-[#27272A]">
           <img
             src="/8.jpeg"
             alt="Agwom Azi John portrait"
@@ -133,14 +133,14 @@ export default function Hero({ onWorkClick }) {
           />
 
           {/* Core Visual Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0D1117]/80 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#09090B]/85 via-transparent to-transparent pointer-events-none" />
 
           {/* Interactive Badge Layer */}
-          <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/10 bg-[#0D1117]/80 p-4 backdrop-blur-xl">
-            <strong className="block text-sm font-semibold text-white">
+          <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-[#27272A] bg-[#111113]/90 p-4 backdrop-blur-xl">
+            <strong className="block text-sm font-semibold text-[#FAFAFA]">
              Open to 
             </strong>
-            <p className="mt-1 text-sm leading-6 text-white/60">
+            <p className="mt-1 text-sm leading-6 text-[#A1A1AA]">
                internships, freelance projects, startup collaborations, and remote software engineering roles.
             </p>
           </div>

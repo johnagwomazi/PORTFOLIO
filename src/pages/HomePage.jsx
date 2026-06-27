@@ -19,7 +19,7 @@ export default function HomePage() {
     <>
       <Navbar />
 
-      <main className="pb-16 bg-[#070A12] text-white">
+      <main className="pb-16 text-[#FAFAFA]">
         <Hero onWorkClick={scrollToProjects} />
 
         {/* PROJECTS */}
@@ -29,6 +29,7 @@ export default function HomePage() {
         >
           <SectionHeading
             eyebrow="Featured Projects"
+            title="My Work"
           />
 
           <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -87,13 +88,13 @@ export default function HomePage() {
             ].map(([title, copy]) => (
               <div
                 key={title}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl shadow-[0_0_60px_rgba(0,245,212,0.06)] transition duration-300 hover:border-[#00F5D4]/20 hover:-translate-y-1"
+                className="rounded-2xl border border-[#27272A] bg-[#111113] p-6 backdrop-blur-xl shadow-[0_0_60px_rgba(231,0,86,0.08)] transition duration-300 hover:border-[#E70056]/30 hover:-translate-y-1"
               >
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="text-lg font-semibold text-[#FAFAFA]">
                   {title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-white/70">
+                <p className="mt-3 text-sm leading-7 text-[#A1A1AA]">
                   {copy}
                 </p>
               </div>
@@ -114,16 +115,16 @@ export default function HomePage() {
             align="center"
           />
 
-          <div className="mt-8 flex flex-col justify-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl sm:flex-row">
+          <div className="mt-8 flex flex-col justify-center gap-3 rounded-2xl border border-[#27272A] bg-[#111113] p-5 backdrop-blur-xl sm:flex-row">
             <a
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#00F5D4] to-[#38BDF8] px-6 py-3 font-semibold text-[#031018] transition hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#E70056] to-[#FF5C93] px-6 py-3 font-semibold text-[#FAFAFA] transition hover:-translate-y-0.5"
               href="mailto:agwomazijohn@example.com"
             >
               Start a Conversation
             </a>
 
             <a
-              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 font-semibold text-white/90 transition hover:-translate-y-0.5 hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-full border border-[#27272A] bg-[#18181B] px-6 py-3 font-semibold text-[#FAFAFA] transition hover:-translate-y-0.5 hover:bg-[#27272A]"
               href="https://github.com/johnagwomazi"
               target="_blank"
               rel="noreferrer"
@@ -132,7 +133,7 @@ export default function HomePage() {
             </a>
 
             <a
-              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 font-semibold text-white/90 transition hover:-translate-y-0.5 hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-full border border-[#27272A] bg-[#18181B] px-6 py-3 font-semibold text-[#FAFAFA] transition hover:-translate-y-0.5 hover:bg-[#27272A]"
               href="https://www.linkedin.com/in/agwom-azi-john-51b41b247"
               target="_blank"
               rel="noreferrer"

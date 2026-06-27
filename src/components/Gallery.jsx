@@ -6,14 +6,14 @@ export default function Gallery({ screenshots }) {
       {screenshots.map((shot, index) => (
         <motion.div
           key={shot.label}
-          className="overflow-hidden rounded-2xl border border-white/10"
+          className="overflow-hidden rounded-2xl border border-[#27272A]"
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.5, delay: index * 0.08 }}
         >
           <div className={`flex min-h-[180px] items-end p-4 ${shot.className}`}>
-            <span className="text-sm font-semibold text-white">{shot.label}</span>
+            <span className="text-sm font-semibold text-[#FAFAFA]">{shot.label}</span>
           </div>
         </motion.div>
       ))}

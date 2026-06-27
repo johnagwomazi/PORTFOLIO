@@ -41,7 +41,9 @@ export const stackGroups = [
   {
     title: "Tools & Workflow",
     items: [
+      { name: "Git", icon: FaGitAlt, color: "#F05032" },
       { name: "GitHub", icon: FaGithub, color: "#FFFFFF" },
+      { name: "Postman", icon: SiPostman, color: "#FF6C37" },
       { name: "VS Code", icon: VscVscode, color: "#007ACC" },
     ],
   },
@@ -57,7 +59,7 @@ const projects = [
     heroSummary:
       "Built to replace fragmented spreadsheets with a fast operational control system.",
     coverClass:
-      "bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.18),transparent_45%),radial-gradient(circle_at_bottom_right,rgba(124,58,237,0.22),transparent_55%)]",
+      "bg-[radial-gradient(circle_at_top_left,rgba(231,0,86,0.18),transparent_45%),radial-gradient(circle_at_bottom_right,rgba(255,92,147,0.18),transparent_55%)]",
     coverCaption: "Control room dashboard",
     technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
     problemStatement:
@@ -86,21 +88,23 @@ const projects = [
     liveDemoUrl: "https://example.com/",
     architecture: ["User", "React UI", "API Gateway", "Express Services", "MongoDB"],
     screenshots: [
-      { label: "Overview", className: "bg-gradient-to-br from-[#00F5D4]/20 to-slate-950" },
-      { label: "Analytics", className: "bg-gradient-to-br from-[#8B5CF6]/20 to-slate-950" },
-      { label: "Access Control", className: "bg-gradient-to-br from-[#22C55E]/20 to-slate-950" },
+      { label: "Overview", className: "bg-gradient-to-br from-[#E70056]/20 to-[#09090B]" },
+      { label: "Analytics", className: "bg-gradient-to-br from-[#FF5C93]/20 to-[#09090B]" },
+      { label: "Access Control", className: "bg-gradient-to-br from-[#A1A1AA]/20 to-[#09090B]" },
     ],
   },
+
   {
     slug: "pulseflow-commerce",
-    title: "PulseFlow Commerce",
+    title: "Nova Store",
     category: "E-commerce Platform",
+    image: "/ecomm.jpg",
     description:
       "A conversion-focused storefront with product storytelling and optimized checkout flows.",
     heroSummary:
       "Designed for clarity, speed, and high-intent purchasing.",
     coverClass:
-      "bg-[radial-gradient(circle_at_top,rgba(0,245,212,0.18),transparent_45%),radial-gradient(circle_at_bottom,rgba(34,197,94,0.18),transparent_55%)]",
+      "bg-[radial-gradient(circle_at_top,rgba(231,0,86,0.18),transparent_45%),radial-gradient(circle_at_bottom,rgba(255,92,147,0.16),transparent_55%)]",
     coverCaption: "Commerce launch page",
     technologies: ["React", "Node.js", "MySQL", "REST APIs"],
     problemStatement:
@@ -129,9 +133,9 @@ const projects = [
     liveDemoUrl: "https://example.com/",
     architecture: ["Visitor", "React Storefront", "Order API", "MySQL", "Fulfillment"],
     screenshots: [
-      { label: "Collection Grid", className: "bg-gradient-to-br from-[#22C55E]/20 to-slate-950" },
-      { label: "Product Story", className: "bg-gradient-to-br from-[#00F5D4]/20 to-slate-950" },
-      { label: "Checkout", className: "bg-gradient-to-br from-[#8B5CF6]/20 to-slate-950" },
+      { label: "Collection Grid", className: "bg-gradient-to-br from-[#E70056]/20 to-[#09090B]" },
+      { label: "Product Story", className: "bg-gradient-to-br from-[#FF5C93]/20 to-[#09090B]" },
+      { label: "Checkout", className: "bg-gradient-to-br from-[#A1A1AA]/20 to-[#09090B]" },
     ],
   },
   {
@@ -143,7 +147,7 @@ const projects = [
     heroSummary:
       "A clean system for managing APIs and developer experience.",
     coverClass:
-      "bg-[radial-gradient(circle_at_top_right,rgba(124,58,237,0.22),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(0,245,212,0.16),transparent_55%)]",
+      "bg-[radial-gradient(circle_at_top_right,rgba(255,92,147,0.18),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(231,0,86,0.16),transparent_55%)]",
     coverCaption: "API operations hub",
     technologies: ["React", "Node.js", "JWT", "MongoDB"],
     problemStatement:
@@ -172,9 +176,9 @@ const projects = [
     liveDemoUrl: "https://example.com/",
     architecture: ["Developer", "Portal UI", "Auth Service", "Docs Store", "Monitoring"],
     screenshots: [
-      { label: "Docs Home", className: "bg-gradient-to-br from-slate-700/40 to-slate-950" },
-      { label: "Auth Flow", className: "bg-gradient-to-br from-[#8B5CF6]/20 to-slate-950" },
-      { label: "Support View", className: "bg-gradient-to-br from-[#00F5D4]/20 to-slate-950" },
+      { label: "Docs Home", className: "bg-gradient-to-br from-[#111113] to-[#09090B]" },
+      { label: "Auth Flow", className: "bg-gradient-to-br from-[#E70056]/20 to-[#09090B]" },
+      { label: "Support View", className: "bg-gradient-to-br from-[#FF5C93]/20 to-[#09090B]" },
     ],
   },
 ];

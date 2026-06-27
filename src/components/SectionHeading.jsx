@@ -15,9 +15,9 @@ export default function SectionHeading({ eyebrow, title, description, align = "l
       viewport={{ once: true, amount: 0.35 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      {eyebrow ? <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-[#00F5D4]">{eyebrow}</p> : null}
-      <h2 className="font-display text-3xl font-bold tracking-[-0.04em] text-white sm:text-4xl lg:text-5xl">{title}</h2>
-      {description ? <p className="mt-4 max-w-3xl text-base leading-8 text-white/65 sm:text-lg">{description}</p> : null}
+      {eyebrow ? <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-[#FF5C93]">{eyebrow}</p> : null}
+      <h2 className="font-display text-3xl font-bold tracking-[-0.04em] text-[#FAFAFA] sm:text-4xl lg:text-5xl">{title}</h2>
+      {description ? <p className="mt-4 max-w-3xl text-base leading-8 text-[#A1A1AA] sm:text-lg">{description}</p> : null}
     </motion.div>
   );
 }
