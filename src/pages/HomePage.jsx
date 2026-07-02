@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import ProjectCard from "../components/ProjectCard";
 import SectionHeading from "../components/SectionHeading";
 import SkillGroup from "../components/SkillGroup";
+import { HiOutlineMail } from "react-icons/hi";
 
 export default function HomePage() {
   const featuredProjects = projects.slice(0, 3);
@@ -30,9 +31,10 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Featured Projects"
             title="My Work"
+            align="center"
           />
 
-          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-2">
             {featuredProjects.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
@@ -47,6 +49,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Tech Stack"
             title="My Development Toolkit"
+            align="center"
           />
 
           <div className="mt-10 grid gap-6">
@@ -69,6 +72,7 @@ export default function HomePage() {
             eyebrow="Services"
             title="Bringing your ideas to life"
             description="I help businesses and startups transform ideas into reliable digital products through thoughtful design, scalable engineering, and modern web technologies."
+            align="center"
           />
 
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
@@ -88,7 +92,7 @@ export default function HomePage() {
             ].map(([title, copy]) => (
               <div
                 key={title}
-                className="rounded-2xl border border-[#27272A] bg-[#111113] p-6 backdrop-blur-xl shadow-[0_0_60px_rgba(231,0,86,0.08)] transition duration-300 hover:border-[#E70056]/30 hover:-translate-y-1"
+                className="rounded-2xl border border-[#27272A] bg-[#111113] p-6 text-center backdrop-blur-xl shadow-[0_0_60px_rgba(231,0,86,0.08)] transition duration-300 hover:border-[#E70056]/30 hover:-translate-y-1"
               >
                 <h3 className="text-lg font-semibold text-[#FAFAFA]">
                   {title}
@@ -115,13 +119,16 @@ export default function HomePage() {
             align="center"
           />
 
-          <div className="mt-8 flex flex-col justify-center gap-3 rounded-2xl border border-[#27272A] bg-[#111113] p-5 backdrop-blur-xl sm:flex-row">
-            <a
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#E70056] to-[#FF5C93] px-6 py-3 font-semibold text-[#FAFAFA] transition hover:-translate-y-0.5"
-              href="mailto:agwomazijohn@example.com"
-            >
-              Start a Conversation
-            </a>
+          <div className="mt-8 flex flex-col justify-center gap-3 rounded-2xl md:border border-[#27272A] md:bg-[#111113] p-5 backdrop-blur-xl sm:flex-row">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=johnagwomazi@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#E70056] to-[#FF5C93] px-6 py-3 font-semibold text-[#FAFAFA]"
+          >
+            <HiOutlineMail className="text-xl" />
+            <span>Start a Conversation</span>
+          </a>
 
             <a
               className="inline-flex items-center justify-center rounded-full border border-[#27272A] bg-[#18181B] px-6 py-3 font-semibold text-[#FAFAFA] transition hover:-translate-y-0.5 hover:bg-[#27272A]"

@@ -33,43 +33,48 @@ export default function Hero({ onWorkClick }) {
     <section className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 pb-16 pt-8 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:pt-14">
       {/* Content Side */}
       <motion.div
-        className="max-w-3xl"
+        className="mx-auto max-w-3xl text-center lg:mx-0 lg:text-left"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <motion.p 
+        <motion.p
           className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-[#FF5C93]"
           variants={itemVariants}
         >
           Full Stack Developer • Product Builder
         </motion.p>
 
-        <motion.h1 
+        <motion.h1
           className="font-display text-4xl font-bold tracking-[-0.04em] text-[#FAFAFA] sm:text-6xl lg:text-7xl"
           variants={itemVariants}
         >
           AGWOM AZI JOHN
         </motion.h1>
 
-        <motion.p 
+        <motion.p
           className="mt-4 text-lg font-semibold text-[#FAFAFA] sm:text-2xl"
           variants={itemVariants}
         >
           Providing value for business growth through codes
         </motion.p>
 
-        <motion.p 
+        <motion.p
           className="mt-6 max-w-2xl text-base leading-8 text-[#A1A1AA] sm:text-md"
           variants={itemVariants}
         >
-        I’m a fullstack developer based in Lagos, Nigeria, working with clients and teams from all over the world. I specialize in building beautiful, responsive, and high-performant web applications that deliver seamless user experiences.With a strong focus on frontend technologies and a solid foundation in backend development, 
-        I bring ideas to life by combining clean code, modern tools, and creative problem solving
+          I’m a fullstack developer based in Lagos, Nigeria, working with
+          clients and teams from all over the world. I specialize in building
+          beautiful, responsive, and high-performant web applications that
+          deliver seamless user experiences.With a strong focus on frontend
+          technologies and a solid foundation in backend development, I bring
+          ideas to life by combining clean code, modern tools, and creative
+          problem solving
         </motion.p>
 
         {/* Call to Actions */}
-        <motion.div 
-          className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
+        <motion.div
+          className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap lg:items-start"
           variants={itemVariants}
         >
           <button
@@ -79,7 +84,7 @@ export default function Hero({ onWorkClick }) {
           >
             View My Work
           </button>
-          
+
           <a
             href="#contact"
             className="inline-flex h-12 items-center justify-center rounded-full border border-[#27272A] bg-[#111113] px-6 font-semibold text-[#FAFAFA] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#18181B] active:translate-y-0"
@@ -89,8 +94,8 @@ export default function Hero({ onWorkClick }) {
         </motion.div>
 
         {/* Navigation Socials */}
-        <motion.nav 
-          className="mt-8 flex items-center gap-3" 
+        <motion.nav
+          className="mt-8 flex items-center justify-center gap-3 lg:justify-start"
           aria-label="Social links"
           variants={itemVariants}
         >
@@ -138,10 +143,11 @@ export default function Hero({ onWorkClick }) {
           {/* Interactive Badge Layer */}
           <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-[#27272A] bg-[#111113]/90 p-4 backdrop-blur-xl">
             <strong className="block text-sm font-semibold text-[#FAFAFA]">
-             Open to 
+              Open to
             </strong>
             <p className="mt-1 text-sm leading-6 text-[#A1A1AA]">
-               internships, freelance projects, startup collaborations, and remote software engineering roles.
+              internships, freelance projects, startup collaborations, and
+              remote software engineering roles.
             </p>
           </div>
         </div>
