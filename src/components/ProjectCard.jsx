@@ -1,6 +1,5 @@
 ﻿import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaArrowRightLong } from "react-icons/fa6";
 
 // Convert motion.article into a motion-wrapped router link for clean semantics
 const MotionLink = motion(Link);
@@ -32,7 +31,7 @@ export default function ProjectCard({ project }) {
       </div>
 
       {/* Card Content */}
-      <div className="flex flex-1 flex-col p-5 sm:p-6">
+      <div className="flex flex-1 flex-col p-5 text-center sm:p-6">
         <h3 className="text-xl font-semibold text-[#FAFAFA] transition-colors duration-200 group-hover:text-[#FF5C93]">
           {project.title}
         </h3>
@@ -42,7 +41,7 @@ export default function ProjectCard({ project }) {
         </p>
 
         {/* Technologies List */}
-        <div className="mt-5 flex flex-wrap gap-2">
+        <div className="mt-5 flex flex-wrap justify-center gap-2">
           {project.technologies.map((tech) => (
             <span
               key={tech}

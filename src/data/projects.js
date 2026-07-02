@@ -28,7 +28,7 @@ export const stackGroups = [
       { name: "Node.js", icon: FaNodeJs, color: "#339933" },
       { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
       { name: "REST APIs", icon: FiGlobe, color: "#00F5D4" },
-      { name: "JWT Auth", icon: FiShield, color: "#8B5CF6" },
+     // { name: "JWT Auth", icon: FiShield, color: "#8B5CF6" },
     ],
   },
   {
@@ -41,9 +41,9 @@ export const stackGroups = [
   {
     title: "Tools & Workflow",
     items: [
-      { name: "Git", icon: FaGitAlt, color: "#F05032" },
+     // { name: "Git", icon: FaGitAlt, color: "#F05032" },
       { name: "GitHub", icon: FaGithub, color: "#FFFFFF" },
-      { name: "Postman", icon: SiPostman, color: "#FF6C37" },
+     // { name: "Postman", icon: SiPostman, color: "#FF6C37" },
       { name: "VS Code", icon: VscVscode, color: "#007ACC" },
     ],
   },
