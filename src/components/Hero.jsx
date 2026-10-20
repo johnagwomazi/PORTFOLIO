@@ -1,6 +1,8 @@
 ﻿import { motion } from "framer-motion";
 import { socialLinks } from "../data/projects";
 
+const cvUrl = null;
+
 // Sequenced orchestration variants
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -56,7 +58,7 @@ export default function Hero({ onWorkClick }) {
           className="mt-4 text-lg font-semibold text-[#FAFAFA] sm:text-2xl"
           variants={itemVariants}
         >
-          Providing value for business growth through codes
+          Building reliable web products that solve real business problems.
         </motion.p>
 
         <motion.p
@@ -66,10 +68,17 @@ export default function Hero({ onWorkClick }) {
           I’m a fullstack developer based in Lagos, Nigeria, working with
           clients and teams from all over the world. I specialize in building
           beautiful, responsive, and high-performant web applications that
-          deliver seamless user experiences.With a strong focus on frontend
+          deliver seamless user experiences. With a strong focus on frontend
           technologies and a solid foundation in backend development, I bring
           ideas to life by combining clean code, modern tools, and creative
           problem solving
+        </motion.p>
+
+        <motion.p
+          className="mt-4 text-sm font-semibold text-[#FF5C93]"
+          variants={itemVariants}
+        >
+          Available for remote Junior Full-Stack and Frontend Developer roles.
         </motion.p>
 
         {/* Call to Actions */}
@@ -91,6 +100,16 @@ export default function Hero({ onWorkClick }) {
           >
             Let&apos;s Build Something Together
           </a>
+
+          {cvUrl ? (
+            <a
+              href={cvUrl}
+              download="Agwom_Azi_John_CV.pdf"
+              className="inline-flex h-12 items-center justify-center rounded-full border border-[#27272A] bg-[#18181B] px-6 font-semibold text-[#FAFAFA] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#27272A] active:translate-y-0"
+            >
+              Download CV
+            </a>
+          ) : null}
         </motion.div>
 
         {/* Navigation Socials */}
@@ -130,7 +149,7 @@ export default function Hero({ onWorkClick }) {
 
         <div className="relative min-h-[420px] overflow-hidden rounded-[1.75rem] border border-[#27272A]">
           <img
-            src="/8.jpeg"
+            src="/8.jpg"
             alt="Agwom Azi John portrait"
             loading="eager"
             decoding="async"

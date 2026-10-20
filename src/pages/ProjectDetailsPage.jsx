@@ -70,33 +70,62 @@ export default function ProjectDetailsPage() {
             <FaArrowLeftLong /> Back To Projects
           </button>
 
-          <div className={`rounded-[1.75rem] border border-[#27272A] p-6 sm:p-8 ${project.coverClass}`}>
-            <div className="max-w-3xl">
-              <span className="inline-flex rounded-full border border-[#27272A] bg-[#111113]/80 px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#FF5C93]">
+          <div className={`overflow-hidden rounded-[1.75rem] border border-[#27272A] ${project.image ? "" : project.coverClass}`}>
+            {project.image ? (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-full max-h-[34rem] w-full object-contain"
+              />
+            ) : (
+              <div className="flex min-h-[18rem] flex-col justify-end p-6 sm:min-h-[24rem] sm:p-8">
+                <span className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#FF5C93]">
+                  {project.category}
+                </span>
+                <h1 className="mt-4 font-display text-4xl font-bold tracking-[-0.04em] text-[#FAFAFA] sm:text-5xl lg:text-6xl">
+                  {project.title}
+                </h1>
+                <p className="mt-4 max-w-3xl text-base leading-8 text-[#A1A1AA] sm:text-lg">
+                  {project.heroSummary}
+                </p>
+              </div>
+            )}
+          </div>
+
+          {project.image ? (
+            <div className="mt-6">
+              <span className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#FF5C93]">
                 {project.category}
               </span>
-              <h1 className="mt-5 font-display text-4xl font-bold tracking-[-0.04em] text-[#FAFAFA] sm:text-5xl lg:text-6xl">
+              <h1 className="mt-3 font-display text-4xl font-bold tracking-[-0.04em] text-[#FAFAFA] sm:text-5xl lg:text-6xl">
                 {project.title}
               </h1>
-              <p className="mt-4 max-w-2xl text-base leading-8 text-[#A1A1AA] sm:text-lg">{project.heroSummary}</p>
+              <p className="mt-4 max-w-3xl text-base leading-8 text-[#A1A1AA] sm:text-lg">
+                {project.heroSummary}
+              </p>
             </div>
-            <div className="mt-8 flex flex-wrap gap-2">
-              {project.technologies.map((tech) => (
-                <span key={tech} className="rounded-full border border-[#27272A] bg-[#18181B] px-3 py-2 text-xs text-[#FAFAFA]">
-                  {tech}
-                </span>
-              ))}
-            </div>
+          ) : null}
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {project.technologies.map((tech) => (
+              <span key={tech} className="rounded-full border border-[#27272A] bg-[#18181B] px-3 py-2 text-xs text-[#FAFAFA]">
+                {tech}
+              </span>
+            ))}
           </div>
         </motion.section>
 
           <div className="flex flex-col mt-4 gap-3 py-2 sm:flex-row sm:flex-wrap">
-            <a className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#E70056] to-[#FF5C93] px-6 py-3 font-semibold text-[#FAFAFA] transition hover:-translate-y-0.5" href={project.githubUrl} target="_blank" rel="noreferrer">
-              <FaGithub /> GitHub Link
-            </a>
-            <a className="inline-flex items-center justify-center gap-2 rounded-full border border-[#27272A] bg-[#111113] px-6 py-3 font-semibold text-[#FAFAFA] transition hover:-translate-y-0.5 hover:bg-[#18181B]" href={project.liveDemoUrl} target="_blank" rel="noreferrer">
-              <FaArrowUpRightFromSquare /> Live Link
-            </a>
+            {project.githubUrl ? (
+              <a className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#E70056] to-[#FF5C93] px-6 py-3 font-semibold text-[#FAFAFA] transition hover:-translate-y-0.5" href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                <FaGithub /> GitHub Link
+              </a>
+            ) : null}
+            {project.liveDemoUrl ? (
+              <a className="inline-flex items-center justify-center gap-2 rounded-full border border-[#27272A] bg-[#111113] px-6 py-3 font-semibold text-[#FAFAFA] transition hover:-translate-y-0.5 hover:bg-[#18181B]" href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer">
+                <FaArrowUpRightFromSquare /> Live Demo
+              </a>
+            ) : null}
           </div>
 
         <section className="mt-4 grid gap-4">
@@ -160,9 +189,11 @@ export default function ProjectDetailsPage() {
           <DetailBlock title="Lessons Learned">
             <p>{project.lessons}</p>
           </DetailBlock>
-          <DetailBlock title="Image Gallery">
-            <Gallery screenshots={project.screenshots} />
-          </DetailBlock>
+          {project.screenshots?.length ? (
+            <DetailBlock title="Image Gallery">
+              <Gallery screenshots={project.screenshots} />
+            </DetailBlock>
+          ) : null}
 
         </section>
       </main>

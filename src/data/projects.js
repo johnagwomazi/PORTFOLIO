@@ -1,8 +1,8 @@
 import { FaReact, FaNodeJs, FaJsSquare, FaHtml5, FaCss3Alt, FaGitAlt } from "react-icons/fa";
 import { FaGithub, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
-import { SiTailwindcss, SiExpress, SiMongodb, SiMysql, SiPostman } from "react-icons/si";
+import { SiTailwindcss, SiExpress, SiMongodb, SiMysql, SiPostman, SiTypescript, SiReactrouter, SiJsonwebtokens } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
-import { FiGlobe, FiShield } from "react-icons/fi";
+import { FiGlobe, FiLayers } from "react-icons/fi";
 
 export const socialLinks = [
   { label: "GitHub", href: "https://github.com/johnagwomazi", icon: FaGithub },
@@ -20,6 +20,9 @@ export const stackGroups = [
       { name: "HTML5", icon: FaHtml5, color: "#E34F26" },
       { name: "CSS3", icon: FaCss3Alt, color: "#1572B6" },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { name: "Zustand", icon: FiLayers, color: "#FF5C93" },
+      { name: "React Router", icon: SiReactrouter, color: "#CA4245" },
     ],
   },
   {
@@ -28,7 +31,7 @@ export const stackGroups = [
       { name: "Node.js", icon: FaNodeJs, color: "#339933" },
       { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
       { name: "REST APIs", icon: FiGlobe, color: "#00F5D4" },
-     // { name: "JWT Auth", icon: FiShield, color: "#8B5CF6" },
+      { name: "JWT Authentication / RBAC", icon: SiJsonwebtokens, color: "#8B5CF6" },
     ],
   },
   {
@@ -41,146 +44,428 @@ export const stackGroups = [
   {
     title: "Tools & Workflow",
     items: [
-     // { name: "Git", icon: FaGitAlt, color: "#F05032" },
+      { name: "Git", icon: FaGitAlt, color: "#F05032" },
       { name: "GitHub", icon: FaGithub, color: "#FFFFFF" },
-     // { name: "Postman", icon: SiPostman, color: "#FF6C37" },
+      { name: "Postman", icon: SiPostman, color: "#FF6C37" },
       { name: "VS Code", icon: VscVscode, color: "#007ACC" },
     ],
   },
 ];
 
 const projects = [
+
   {
-    slug: "nexa-admin-suite",
-    title: "Nexa Admin Suite",
-    category: "B2B SaaS Platform",
+    slug: "eventidor-ticketing-platform",
+    title: "Eventidor",
+    category: "Full-Stack Event Management & Ticketing SaaS",
+    image: "/eventidor_homepage.png",
     description:
-      "A modular admin system for managing users, workflows, analytics, and role-based access in one unified interface.",
+      "A full-stack multi-role event management and ticketing platform built for platform administrators, event organizations, managers, and customers. The system handles organization management, event lifecycle workflows, team members, event discovery, attendance, customer accounts, and administrative operations.",
     heroSummary:
-      "Built to replace fragmented spreadsheets with a fast operational control system.",
+      "Built as a complete event-management ecosystem where organizations can manage events and teams while customers can discover events and interact with ticketing and account workflows through role-specific experiences.",
     coverClass:
       "bg-[radial-gradient(circle_at_top_left,rgba(231,0,86,0.18),transparent_45%),radial-gradient(circle_at_bottom_right,rgba(255,92,147,0.18),transparent_55%)]",
-    coverCaption: "Control room dashboard",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    coverCaption: "Multi-role event management and ticketing platform",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Zustand",
+      "React Router",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "REST API",
+    ],
     problemStatement:
-      "Internal teams needed a single system to track onboarding progress, manage permissions, and view live performance metrics without losing speed or clarity.",
+      "Event platforms require more than simply displaying events. The challenge was building a system capable of supporting multiple organizations, users, managers, customers, event lifecycle states, permissions, attendance operations, and platform administration while keeping data isolated between organizations.",
     features: [
-      "Role-aware dashboard with secure session management",
-      "Realtime analytics widgets and conversion funnels",
-      "Task pipelines with filters, tags, and SLA states",
-      "Audit-friendly activity timeline",
+      "Multi-role architecture supporting Super Admin, Organization Admin, Manager, and Customer accounts",
+      "Organization-level data isolation and administrative workflows",
+      "Event creation, editing, publishing, postponement, resumption, completion, and cancellation workflows",
+      "Auditable event lifecycle history including transition reasons, actors, and timestamps",
+      "Organization member and manager management",
+      "Manager assignment to individual events",
+      "Event attendance and attendee check-in workflows",
+      "Platform-level user and organization management",
+      "Organization approval, rejection, suspension, and reactivation workflows",
+      "Customer-facing event discovery and browsing experience",
+      "Customer ticket, history, and profile workflows",
+      "Responsive administrative and customer interfaces",
     ],
     challenges: [
-      "Keeping dense operational data readable on smaller screens",
-      "Ensuring authentication flows stayed secure without adding friction",
-      "Balancing rich dashboard visuals with performance budgets",
+      "Designing authorization across four different user roles",
+      "Keeping organization data isolated while still allowing platform-level administration",
+      "Managing complex event lifecycle transitions without allowing invalid state changes",
+      "Coordinating frontend and backend state across organizations, events, users, managers, and customers",
+      "Building administrative workflows without exposing organization-specific information to unauthorized users",
     ],
     solutions: [
-      "Built a modular card system with progressive disclosure",
-      "Used JWT-based auth and route guards for protected workflows",
-      "Optimized data fetching and motion timing for a fast, calm interface",
+      "Implemented JWT authentication and role-based authorization across protected frontend and backend routes",
+      "Introduced organization-aware backend queries and authorization rules to enforce data isolation",
+      "Implemented explicit event lifecycle states and controlled transition rules",
+      "Used Zustand to manage application state across authentication, organizations, events, and customer workflows",
+      "Separated platform administration, organization administration, management, and customer experiences into role-specific interfaces",
     ],
     impact:
-      "Reduced onboarding handoff time and gave leadership a clear, real-time view of pipeline health across teams.",
+      "Delivered a substantial multi-role SaaS platform capable of supporting event organizations, managers, customers, event lifecycle management, attendance operations, and platform-wide administration through a structured full-stack architecture.",
     lessons:
-      "Strong hierarchy beats visual noise when a product serves both operators and executives.",
-    githubUrl: "https://github.com/",
-    liveDemoUrl: "https://example.com/",
-    architecture: ["User", "React UI", "API Gateway", "Express Services", "MongoDB"],
+      "Building a multi-tenant SaaS product requires careful attention to authorization, data isolation, state transitions, business rules, and the differences between platform-level and organization-level control.",
+    githubUrl: "https://github.com/johnagwomazi/ET",
+    liveDemoUrl: "https://event-mgnt-frontenf.onrender.com/",
+    architecture: [
+      "React Application",
+      "Zustand State Layer",
+      "REST API",
+      "Express Controllers",
+      "Authorization Middleware",
+      "MongoDB",
+      "Organization Isolation",
+      "Role-Based Dashboards",
+    ],
     screenshots: [
-      { label: "Overview", className: "bg-gradient-to-br from-[#E70056]/20 to-[#09090B]" },
-      { label: "Analytics", className: "bg-gradient-to-br from-[#FF5C93]/20 to-[#09090B]" },
-      { label: "Access Control", className: "bg-gradient-to-br from-[#A1A1AA]/20 to-[#09090B]" },
+      {
+        label: "Public Event Discovery",
+        image: "/eventidor_homepage.png",
+      },
+      {
+        label: "Popular Events",
+        image: "/eventidor_popular_events.png",
+      },
+      {
+        label: "Event Details",
+        image: "/eventidor_event_details.png",
+      },
+      {
+        label: "Customer Tickets",
+        image: "/eventidor_customer_tickets.png",
+      },
+      {
+        label: "Customer Event History",
+        image: "/eventidor_customer_history.png",
+      },
+      {
+        label: "Ticket Checkout",
+        image: "/eventidor_checkout.png",
+      },
+      {
+        label: "Authentication",
+        image: "/eventidor_login.png",
+      },
+      {
+        label: "Organization Dashboard",
+        image: "/eventidor_org_dashboard.png",
+      },
+      {
+        label: "Organization Event Management",
+        image: "/eventidor_org_events.png",
+      },
+      {
+        label: "Finance & Withdrawals",
+        image: "/eventidor_finance.png",
+      },
+    ],
+  },
+  {
+    slug: "attendance-management-system",
+    title: "Attendance Management System",
+    category: "Full-Stack QR Attendance Management Platform",
+    image: "/attendance_student_dashboard.png",
+    description:
+      "A full-stack attendance management system built to replace manual attendance processes with dynamic QR-based attendance, schedule validation, session rules, enrollment management, automatic absence handling, and role-specific administration.",
+    heroSummary:
+      "Built to automate attendance operations from course enrollment and scheduling through QR check-in, attendance validation, monitoring, and student attendance history.",
+    coverClass:
+      "bg-[radial-gradient(circle_at_top,rgba(231,0,86,0.18),transparent_45%),radial-gradient(circle_at_bottom,rgba(255,92,147,0.16),transparent_55%)]",
+    coverCaption: "QR-based attendance management platform",
+    technologies: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Zustand",
+      "React Router",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "JWT",
+      "Socket.IO",
+      "REST API",
+    ],
+    problemStatement:
+      "Manual attendance systems are slow, difficult to audit, and vulnerable to inaccurate attendance records. The challenge was creating a system that could verify whether a student should actually be allowed to attend a class based on enrollment, course duration, class schedule, session timing, and other attendance rules before recording attendance.",
+    features: [
+      "Admin, Manager, and Student role-based experiences",
+      "Dynamic QR-code attendance workflow",
+      "Schedule-aware attendance validation",
+      "Session-based attendance rules",
+      "Automatic absence handling for scheduled sessions",
+      "Course and student enrollment management",
+      "Course schedule management",
+      "Student attendance history",
+      "Manager-facing QR display and live attendance monitoring",
+      "Administrator attendance review workflows",
+      "Course-duration validation",
+      "JWT authentication and role-based access control",
+      "Payment-based enrollment access rules",
+      "Responsive desktop and mobile interfaces",
+    ],
+    challenges: [
+      "Preventing students from recording attendance when they do not have a scheduled class",
+      "Handling multiple class sessions and timing rules correctly",
+      "Keeping attendance records restricted to the correct student and enrollment",
+      "Automatically determining absence for scheduled sessions",
+      "Coordinating enrollment, schedules, course duration, payment status, and attendance validation",
+      "Supporting real-time attendance behavior without breaking existing attendance rules",
+    ],
+    solutions: [
+      "Created centralized attendance validation rules on the backend",
+      "Implemented dynamic QR-based check-in instead of static attendance codes",
+      "Used JWT authentication and RBAC to restrict each role to its permitted workflows",
+      "Connected attendance checks to schedules, sessions, enrollments, and course duration",
+      "Implemented automatic absence handling for scheduled sessions",
+      "Used Socket.IO for real-time attendance-related updates where required",
+      "Used MySQL relational data structures to connect students, courses, schedules, enrollments, and attendance records",
+    ],
+    impact:
+      "Delivered an end-to-end attendance platform that automates attendance capture and validation while giving administrators, managers, and students dedicated tools for managing courses, schedules, enrollments, attendance records, and history.",
+    lessons:
+      "Attendance automation is primarily a business-rules problem rather than simply a QR-code problem. Reliable attendance requires combining authentication, enrollment state, schedules, session timing, course duration, and authorization before accepting a check-in.",
+    githubUrl: "https://github.com/johnagwomazi/ATTENDANCE-SYSTEM",
+    liveDemoUrl: "https://attendance-live.onrender.com",
+    architecture: [
+      "React Application",
+      "Zustand State Layer",
+      "REST API",
+      "Socket.IO",
+      "Express Backend",
+      "Attendance Validation Layer",
+      "MySQL",
+      "Role-Based Interfaces",
+    ],
+    screenshots: [
+      {
+        label: "Login",
+        image: "/attendance_login.png",
+      },
+      {
+        label: "Student Dashboard",
+        image: "/attendance_student_dashboard.png",
+      },
+      {
+        label: "QR Check-In",
+        image: "/attendance_student_qr_checkin.png",
+      },
+      {
+        label: "Attendance History",
+        image: "/attendance_student_history.png",
+      },
+      {
+        label: "Admin Dashboard",
+        image: "/attendance_admin_dashboard.png",
+      },
+      {
+        label: "Students Management",
+        image: "/attendance_admin_students.png",
+      },
+      {
+        label: "Live Attendance Feed",
+        image: "/attendance_admin_live_attendance.png",
+      },
+      {
+        label: "Course Management",
+        image: "/attendance_admin_courses.png",
+      },
+    ],
+  },
+  {
+    slug: "nezbo-real-estate-platform",
+    title: "Nezbo Lite",
+    category: "Real Estate Property Discovery Platform",
+    image: "/nobzo_lite_feed.png",
+    description:
+      "A responsive real-estate property discovery application built with React and TypeScript, allowing users to browse properties, search listings, filter properties by location and listing type, and view detailed property information.",
+    heroSummary:
+      "Built as a responsive property-discovery experience focused on structured property browsing, filtering, reusable frontend architecture, and clean application state management.",
+    coverClass:
+      "bg-[radial-gradient(circle_at_top_right,rgba(255,92,147,0.18),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(231,0,86,0.16),transparent_55%)]",
+    coverCaption: "Responsive real-estate discovery experience",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand",
+      "React Router DOM",
+      "Lucide React",
+    ],
+    problemStatement:
+      "Property platforms need to make large numbers of listings easy to explore without overwhelming users. The challenge was designing a responsive interface where property discovery, filtering, search, navigation, and detailed listing information could work together cleanly across desktop and mobile devices.",
+    features: [
+      "Responsive property browsing interface",
+      "Property search functionality",
+      "Filtering by location",
+      "Filtering by listing type",
+      "Detailed property pages",
+      "Centralized Zustand state management",
+      "TypeScript-based component and data structures",
+      "Responsive navigation",
+      "Reusable property components",
+      "Mobile-friendly property discovery experience",
+    ],
+    challenges: [
+      "Managing property and interface state across multiple pages",
+      "Keeping filters and property results synchronized",
+      "Creating reusable components for different property layouts",
+      "Maintaining consistent TypeScript data structures across the application",
+      "Building responsive property layouts that remain usable on smaller screens",
+    ],
+    solutions: [
+      "Used Zustand to centralize property, authentication, and interface state",
+      "Used TypeScript to improve consistency across application data and component props",
+      "Implemented reusable property and layout components",
+      "Used React Router DOM for structured navigation and detailed property routes",
+      "Built responsive layouts with Tailwind CSS for desktop, tablet, and mobile experiences",
+    ],
+    impact:
+      "Delivered a production-deployed real-estate frontend demonstrating responsive UI development, TypeScript application architecture, state management, routing, filtering, search, and property discovery workflows.",
+    lessons:
+      "Building property-discovery applications requires balancing visual presentation with structured application state, reusable components, filtering behavior, responsive design, and predictable navigation.",
+    githubUrl: "https://github.com/johnagwomazi/NEZBO",
+    liveDemoUrl: "https://nezbolite-sigma.vercel.app/",
+    architecture: [
+      "React Application",
+      "TypeScript",
+      "Zustand State Layer",
+      "React Router",
+      "Property Data Layer",
+      "Responsive UI",
+    ],
+    screenshots: [
+      {
+        label: "Property Marketplace",
+        image: "/nobzo_lite_feed.png",
+      },
+      {
+        label: "Admin Dashboard",
+        image: "/nobzo_lite_admin_dashboard.png",
+      },
+      {
+        label: "Authentication",
+        image: "/nobzo_lite_login.png",
+      },
+      {
+        label: "Property Details",
+        image: "/nobzo_lite_property_details.png",
+      },
+      {
+        label: "Property Engagement & Comments",
+        image: "/nobzo_lite_property_comments.png",
+      },
     ],
   },
 
   {
-    slug: "pulseflow-commerce",
-    title: "Nova Store",
-    category: "E-commerce Platform",
-    image: "/ecomm.jpg",
-    description:
-      "A conversion-focused storefront with product storytelling and optimized checkout flows.",
-    heroSummary:
-      "Designed for clarity, speed, and high-intent purchasing.",
-    coverClass:
-      "bg-[radial-gradient(circle_at_top,rgba(231,0,86,0.18),transparent_45%),radial-gradient(circle_at_bottom,rgba(255,92,147,0.16),transparent_55%)]",
-    coverCaption: "Commerce launch page",
-    technologies: ["React", "Node.js", "MySQL", "REST APIs"],
-    problemStatement:
-      "The brand needed a storefront that elevated products visually while keeping browsing, cart management, and checkout very fast.",
-    features: [
-      "Curated collections with cinematic product cards",
-      "Smart filters and persistent cart state",
-      "Checkout-ready order summaries and trust cues",
-      "Responsive layouts optimized for mobile shopping",
-    ],
-    challenges: [
-      "Keeping product imagery premium without hurting load speed",
-      "Making checkout feel trustworthy and concise",
-      "Maintaining layout consistency across many breakpoints",
-    ],
-    solutions: [
-      "Used a content-first layout with subtle depth and restrained motion",
-      "Simplified checkout steps and made microcopy explicit",
-      "Created a scalable card grid and tokenized spacing system",
-    ],
-    impact:
-      "Improved browse-to-cart clarity and supported a more confident purchase flow across devices.",
-    lessons:
-      "Luxury commerce is about confidence, not decoration.",
-    githubUrl: "https://github.com/",
-    liveDemoUrl: "https://example.com/",
-    architecture: ["Visitor", "React Storefront", "Order API", "MySQL", "Fulfillment"],
-    screenshots: [
-      { label: "Collection Grid", className: "bg-gradient-to-br from-[#E70056]/20 to-[#09090B]" },
-      { label: "Product Story", className: "bg-gradient-to-br from-[#FF5C93]/20 to-[#09090B]" },
-      { label: "Checkout", className: "bg-gradient-to-br from-[#A1A1AA]/20 to-[#09090B]" },
-    ],
-  },
-  {
-    slug: "atlas-developer-portal",
-    title: "Atlas Developer Portal",
-    category: "API Platform",
-    description:
-      "A developer portal for API onboarding, authentication, documentation, and support workflows.",
-    heroSummary:
-      "A clean system for managing APIs and developer experience.",
-    coverClass:
-      "bg-[radial-gradient(circle_at_top_right,rgba(255,92,147,0.18),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(231,0,86,0.16),transparent_55%)]",
-    coverCaption: "API operations hub",
-    technologies: ["React", "Node.js", "JWT", "MongoDB"],
-    problemStatement:
-      "API consumers needed a clear path to understand endpoints, validate credentials, and troubleshoot integrations without waiting on support.",
-    features: [
-      "Interactive endpoint reference and token guide",
-      "Secure auth onboarding and key rotation patterns",
-      "Support escalation with activity context",
-      "Status-aware cards and usage snapshots",
-    ],
-    challenges: [
-      "Explaining complex technical concepts without overwhelming users",
-      "Keeping security guidance visible but non-intrusive",
-      "Designing a documentation surface that still felt premium",
-    ],
-    solutions: [
-      "Used layered sections with concise callouts and step-by-step flows",
-      "Prioritized secure defaults and clear recovery states",
-      "Composed the page around scanning behavior and decision points",
-    ],
-    impact:
-      "Reduced onboarding confusion and gave partners a stronger self-serve experience.",
-    lessons:
-      "Great developer UX is an equal blend of clarity, trust, and momentum.",
-    githubUrl: "https://github.com/",
-    liveDemoUrl: "https://example.com/",
-    architecture: ["Developer", "Portal UI", "Auth Service", "Docs Store", "Monitoring"],
-    screenshots: [
-      { label: "Docs Home", className: "bg-gradient-to-br from-[#111113] to-[#09090B]" },
-      { label: "Auth Flow", className: "bg-gradient-to-br from-[#E70056]/20 to-[#09090B]" },
-      { label: "Support View", className: "bg-gradient-to-br from-[#FF5C93]/20 to-[#09090B]" },
-    ],
-  },
+  slug: "novashop-commerce",
+  title: "NovaShop",
+  category: "Full-Stack MERN E-Commerce Platform",
+  image: "/E1.jpg",
+  description:
+    "A production-grade MERN e-commerce platform featuring secure authentication, product management, cart functionality, coupon support, Paystack payments, order processing, and role-based administration.",
+
+  heroSummary:
+    "Built as a complete commerce ecosystem with customer, manager, and admin workflows from product discovery to payment verification and fulfillment.",
+
+  coverClass:
+    "bg-[radial-gradient(circle_at_top,rgba(231,0,86,0.18),transparent_45%),radial-gradient(circle_at_bottom,rgba(255,92,147,0.16),transparent_55%)]",
+
+  coverCaption: "Production-ready MERN commerce platform",
+
+  technologies: [
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "Zustand",
+    "React Router",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Mongoose",
+    "JWT",
+    "Paystack",
+    "Axios",
+  ],
+
+  problemStatement:
+    "Modern online stores require more than product listings. The challenge was building a scalable commerce platform that could securely handle authentication, product management, payment processing, order workflows, customer accounts, and administrative operations within a single application.",
+
+  features: [
+    "Complete storefront with product discovery and detailed product pages",
+    "JWT-based authentication and role-based access control",
+    "Persistent shopping cart and checkout workflow",
+    "Paystack payment integration with backend payment verification",
+    "Coupon validation and discount management system",
+    "Customer order history and account dashboard",
+    "Admin and manager dashboards with protected routes",
+    "Product approval and moderation workflow",
+    "Sales analytics and business reporting dashboard",
+    "User management, settings management, and order monitoring",
+  ],
+
+  challenges: [
+    "Coordinating complex state across authentication, products, cart, orders, analytics, and administration",
+    "Securing payment flows while maintaining a smooth checkout experience",
+    "Implementing role-based access control across frontend and backend",
+    "Designing scalable API architecture for commerce operations",
+    "Managing multiple order states and administrative workflows",
+  ],
+
+  solutions: [
+    "Implemented centralized state management using Zustand for predictable data flow",
+    "Built secure JWT authentication with protected routes and role-based authorization",
+    "Designed a layered backend architecture using controllers, services, middleware, and Mongoose models",
+    "Integrated Paystack checkout with server-side payment verification",
+    "Created dedicated admin workflows for product approval, analytics, and user management",
+  ],
+
+  impact:
+    "Delivered a complete end-to-end e-commerce platform supporting customer purchases, secure payments, product moderation, business analytics, and administrative operations through a scalable MERN architecture.",
+
+  lessons:
+    "Building production commerce systems requires balancing user experience, security, scalability, and business operations rather than focusing solely on storefront design.",
+
+  githubUrl: "https://github.com/johnagwomazi/MERN-E-Commerce",
+  liveDemoUrl: "https://novastore-frontend.onrender.com/",
+
+  architecture: [
+    "React SPA",
+    "Zustand State Layer",
+    "REST API",
+    "Express Services",
+    "MongoDB",
+    "Paystack",
+    "Admin Dashboard",
+  ],
+
+  screenshots: [
+    {
+      label: "Storefront & Product Discovery",
+      image: "/E5.jpg",
+    },
+    {
+      label: "Product Details",
+      image: "/E4.jpg",
+    },
+    {
+      label: "Signin",
+      image: "/E2.jpg",
+    },
+    {
+      label: "Analytics Dashboard",
+      image: "/E3.jpg",
+    },
+  ],
+}
+
 ];
 
 export default projects;

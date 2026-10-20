@@ -20,14 +20,17 @@ export default function Navbar() {
           </span>
         </NavLink> */}
 
-        <nav className="flex flex-wrap items-center gap-2 text-sm text-[#A1A1AA]">
+        <nav aria-label="Primary navigation" className="flex flex-wrap items-center gap-2 text-sm text-[#A1A1AA]">
           <NavLink to="/" className={({ isActive }) => `rounded-full px-4 py-2 transition ${isActive ? 'bg-[#18181B] text-[#FAFAFA]' : 'hover:bg-[#111113] hover:text-[#FAFAFA]'}`}>
             Home
           </NavLink>
           <a href="/#projects" className="rounded-full px-4 py-2 transition hover:bg-[#111113] hover:text-[#FAFAFA]">
             Projects
           </a>
-          <a href="#contact" className="rounded-full px-4 py-2 transition hover:bg-[#111113] hover:text-[#FAFAFA]">
+          <a href="/#experience" className="rounded-full px-4 py-2 transition hover:bg-[#111113] hover:text-[#FAFAFA]">
+            Experience
+          </a>
+          <a href="/#contact" className="rounded-full px-4 py-2 transition hover:bg-[#111113] hover:text-[#FAFAFA]">
             Contact
           </a>
         </nav>
