@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 export default function ProjectCard({ project }) {
   return (
     <motion.article
-      className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-[#27272A] bg-[#111113] shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-colors duration-300 hover:bg-[#18181B] will-change-transform block"
+      className="group flex h-full min-w-0 max-w-full flex-col overflow-hidden rounded-[1.75rem] border border-[#27272A] bg-[#111113] shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-colors duration-300 hover:bg-[#18181B] will-change-transform block"
       whileHover={{ y: -8 }}
       transition={{ type: "spring", stiffness: 220, damping: 24 }}
     >
       {/* Project Image Container */}
-      <div className="relative h-[220px] overflow-hidden sm:h-[260px]">
+      <div className="relative aspect-[6/5] shrink-0 overflow-hidden sm:aspect-auto sm:h-[260px]">
         {project.image ? (
           <img
             src={project.image}
             alt={`Screenshot preview of ${project.title}`}
             loading="lazy"
-            className="h-full w-full object-contain transition duration-700 ease-out group-hover:scale-105"
+            className="h-full w-full object-cover object-top transition duration-700 sm:object-contain sm:object-center ease-out group-hover:scale-105"
           />
         ) : (
           <div className={`flex h-full w-full items-end p-5 ${project.coverClass}`}>
@@ -25,41 +25,41 @@ export default function ProjectCard({ project }) {
           </div>
         )}
 
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#09090B] via-[#09090B]/30 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#09090B]/45 via-transparent to-transparent sm:from-[#09090B] sm:via-[#09090B]/30 sm:to-transparent" />
 
-        <div className="absolute left-4 top-4">
-          <span className="rounded-full border border-[#27272A] bg-[#111113]/90 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#FAFAFA]">
+        <div className="absolute left-3 top-3 max-w-[75%] sm:left-4 sm:top-4 sm:max-w-none">
+          <span className="line-clamp-2 rounded-xl border border-[#27272A] bg-[#111113]/90 px-2 py-1 text-[9px] leading-3 font-semibold uppercase tracking-[0.04em] sm:inline sm:rounded-full sm:px-3 sm:py-1.5 sm:text-xs sm:leading-4 sm:tracking-wider text-[#FAFAFA]">
             {project.category}
           </span>
         </div>
       </div>
 
       {/* Card Content */}
-      <div className="flex flex-1 flex-col p-5 text-center sm:p-6">
-        <h3 className="text-xl font-semibold text-[#FAFAFA] transition-colors duration-200 group-hover:text-[#FF5C93]">
+      <div className="flex min-w-0 flex-1 flex-col p-4 text-center sm:p-6">
+        <h3 className="text-lg leading-6 font-semibold sm:text-xl sm:leading-7 text-[#FAFAFA] transition-colors duration-200 group-hover:text-[#FF5C93]">
           {project.title}
         </h3>
 
-        <p className="mt-3 text-sm leading-7 text-[#A1A1AA]">
+        <p className="mt-2 line-clamp-2 text-xs leading-5 sm:mt-3 sm:line-clamp-none sm:text-sm sm:leading-7 text-[#A1A1AA]">
           {project.description}
         </p>
 
         {/* Technologies List */}
-        <div className="mt-5 flex flex-wrap justify-center gap-2">
+        <div className="mt-3 flex min-w-0 flex-wrap justify-center gap-1 sm:mt-5 sm:gap-2">
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-[#27272A] bg-[#18181B] px-3 py-1 text-xs font-medium text-[#FAFAFA]"
+              className="max-w-full break-words rounded-full border border-[#27272A] bg-[#18181B] px-2 py-0.5 text-[10px] font-medium sm:px-3 sm:py-1 sm:text-xs text-[#FAFAFA]"
             >
               {tech}
             </span>
           ))}
           </div>
 
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-2 border-t border-[#27272A] pt-5">
+        <div className="mt-3 flex min-w-0 flex-wrap items-center justify-center gap-2 border-t border-[#27272A] pt-3 sm:mt-6 sm:pt-5">
           <Link
             to={`/projects/${project.slug}`}
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#E70056] to-[#FF5C93] px-4 py-2 text-xs font-semibold text-[#FAFAFA] transition hover:-translate-y-0.5"
+            className="inline-flex min-h-11 max-w-full items-center justify-center rounded-full sm:min-h-0 bg-gradient-to-r from-[#E70056] to-[#FF5C93] px-3 py-2 text-xs font-semibold sm:px-4 text-[#FAFAFA] transition hover:-translate-y-0.5"
           >
             View Details
           </Link>
@@ -69,7 +69,7 @@ export default function ProjectCard({ project }) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-[#27272A] bg-[#18181B] px-4 py-2 text-xs font-semibold text-[#FAFAFA] transition hover:-translate-y-0.5 hover:bg-[#27272A]"
+              className="inline-flex min-h-11 max-w-full items-center justify-center rounded-full sm:min-h-0 border border-[#27272A] bg-[#18181B] px-3 py-2 text-xs font-semibold sm:px-4 text-[#FAFAFA] transition hover:-translate-y-0.5 hover:bg-[#27272A]"
             >
               GitHub
             </a>
@@ -80,7 +80,7 @@ export default function ProjectCard({ project }) {
               href={project.liveDemoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-[#27272A] bg-[#18181B] px-4 py-2 text-xs font-semibold text-[#FAFAFA] transition hover:-translate-y-0.5 hover:bg-[#27272A]"
+              className="inline-flex min-h-11 max-w-full items-center justify-center rounded-full sm:min-h-0 border border-[#27272A] bg-[#18181B] px-3 py-2 text-xs font-semibold sm:px-4 text-[#FAFAFA] transition hover:-translate-y-0.5 hover:bg-[#27272A]"
             >
               Live Demo
             </a>
