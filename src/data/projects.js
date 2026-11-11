@@ -1,6 +1,6 @@
 import { FaReact, FaNodeJs, FaJsSquare, FaHtml5, FaCss3Alt, FaGitAlt } from "react-icons/fa";
 import { FaGithub, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
-import { SiTailwindcss, SiExpress, SiMongodb, SiMysql, SiPostman, SiTypescript, SiReactrouter, SiJsonwebtokens } from "react-icons/si";
+import { SiTailwindcss, SiExpress, SiMongodb, SiMysql, SiPostgresql, SiPostman, SiTypescript, SiReactrouter, SiJsonwebtokens } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FiGlobe, FiLayers } from "react-icons/fi";
 
@@ -39,6 +39,7 @@ export const stackGroups = [
     items: [
       { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
       { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
     ],
   },
   {

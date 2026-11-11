@@ -14,7 +14,7 @@ const experiences = [
     role: "Frontend Engineer Intern",
     company: "NOBZO Verse",
     location: "Remote",
-    period: "July 2026 – Present",
+    period: "July 2026 – October 2026",
     summary:
       "Contribute frontend features to a professional Next.js and TypeScript codebase while working within an established architecture, design system, and Git-based team workflow.",
     points: [
@@ -30,7 +30,7 @@ const experiences = [
     role: "Full-Stack Web Development Intern",
     company: "Team Oreo",
     location: "Remote",
-    period: "September 2026 – Present",
+    period: "September 2026 – October 2026",
     summary:
       "Contribute across frontend and backend development while collaborating with a development team on real production-oriented web projects.",
     points: [
@@ -43,10 +43,25 @@ const experiences = [
     technologies: ["JavaScript", "React / Next.js", "Node.js", "Git", "Responsive Web Development"],
   },
   {
-    role: "Frontend Development Instructor / Tutor",
-    company: "New Horizons",
+    role: "Frontend Instructor",
+    company: "New Horizons, Akoka",
     location: "Lagos, Nigeria",
-    period: "July 2026 – September 2026",
+    period: "August 2026 – September 2026",
+    summary:
+      "Taught practical frontend web development while mentoring learners through JavaScript, React, responsive interfaces, debugging, and project implementation.",
+    points: [
+      "Taught HTML, CSS, JavaScript, React, JSX, components, routing, hooks, state, DOM/events, and API consumption.",
+      "Designed practical coding exercises and project-led lessons.",
+      "Helped students debug syntax, component logic, routing, state, styling, and data-flow problems.",
+      "Encouraged readable code, reusable components, responsive interfaces, and independent problem solving.",
+    ],
+    technologies: ["HTML", "CSS", "JavaScript", "React"],
+  },
+  {
+    role: "Frontend Tutor",
+    company: "New Horizons, Surulere",
+    location: "Lagos, Nigeria",
+    period: "July 2026 – August 2026",
     summary:
       "Taught practical frontend web development while mentoring learners through JavaScript, React, responsive interfaces, debugging, and project implementation.",
     points: [
