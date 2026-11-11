@@ -1,13 +1,12 @@
 import { FaReact, FaNodeJs, FaJsSquare, FaHtml5, FaCss3Alt, FaGitAlt } from "react-icons/fa";
-import { FaGithub, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { SiTailwindcss, SiExpress, SiMongodb, SiMysql, SiPostgresql, SiPostman, SiTypescript, SiReactrouter, SiJsonwebtokens } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FiGlobe, FiLayers } from "react-icons/fi";
 
 export const socialLinks = [
   { label: "GitHub", href: "https://github.com/johnagwomazi", icon: FaGithub },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/agwom-azi-john-51b41b247", icon: FaLinkedinIn },
-  { label: "Instagram", href: "https://www.instagram.com/", icon: FaInstagram },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/azi-john-agwom-51b41b247", icon: FaLinkedinIn },
   { label: "X", href: "https://x.com/agwom_azi98812", icon: FaXTwitter },
 ];
 
